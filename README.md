@@ -1,5 +1,24 @@
 #Bienvenidos al curso de Angular!
 
+Tienes preguntas? [Crea un issue](https://github.com/eloytoro/ngCourse/issues/new)
+
+Ya sabes conceptos basicos? Revisa
+
+* [fgPractices](https://github.com/eloytoro/fgPractices)
+* [$resource](https://docs.angularjs.org/api/ngResource/service/$resource)
+* [ui.router](https://github.com/angular-ui/ui-router)
+
+Para correr este demo usa
+
+```
+git clone https://github.com/eloytoro/ngCourse.git
+cd ngCourse
+npm install
+gulp serve
+```
+
+Para conectarlo con el servidor necesitas [todo-backend](https://github.com/eloytoro/todo-backend)
+
 ##Que es Angular?
 + Front-End framework
 + Orientado a componentes
