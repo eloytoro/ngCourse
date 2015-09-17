@@ -1,7 +1,7 @@
 angular.module('ngCourse')
 
 .factory('ListResource', function ($resource) {
-    var res = $resource('http://localhost:3000/lists/:list', {
+    var res = $resource('http://192.168.4.162:3000/lists/:list', {
         list: '@_id'
     }, {
         update: {

@@ -1,6 +1,6 @@
 angular.module('ngCourse')
 
-.directive('addTask', function () {
+.directive('addTask', function (TaskResource, $stateParams) {
     return {
         restrict: 'E',
         templateUrl: 'views/add-task.html',
@@ -10,10 +10,17 @@ angular.module('ngCourse')
             element.find('input').on('keydown', function (e) {
                 if (e.keyCode == 13 && scope.title) {
                     scope.$apply(function () {
-                        scope.tasks.push({
+                        var task = new TaskResource({
                             text: scope.title,
                             done: false
                         });
+
+                        scope.tasks.push(task);
+
+                        task.$save({
+                            list: $stateParams.list
+                        })
+
                         scope.title = '';
                     });
                 }
